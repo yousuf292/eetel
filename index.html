@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="./assets/css/main.css" rel="stylesheet" />
+    <script src="./assets/js/alpine-3.3.js" defer></script>
+</head>
+
+<body class="bg-black text-white">
+    <header class="bg-gray-800 flex flex-col w-full" x-data="{isOpen: false}">
+        <nav class="w-full lg:w-6xl mx-auto py-2 flex justify-between items-center">
+            <img src="./assets/img/logo.webp" class="h-14" />
+            <button @click="isOpen = !isOpen" class="lg:hidden">
+                <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 18L20 18" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 12L20 12" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M4 6L20 6" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+            <!-- Desktop Menu -->
+            <ul class="hidden lg:flex items-center gap-x-4 uppercase font-semibold">
+                <li class="hover:text-[#53E79C]"><a href="#">Home</a></li>
+                <li class="hover:text-[#53E79C]"><a href="#">About Us</a></li>
+                <li class="hover:text-[#53E79C]"><a href="#">Services</a></li>
+                <li class="hover:text-[#53E79C]"><a href="#">Products</a></li>
+                <li class="hover:text-[#53E79C]"><a href="#">Careers</a></li>
+                <li
+                    class="ms-6 bg-[#53E79C] hover:bg-[#4DF5A0] text-black py-3 px-4 rounded-md shadow shadow-[#53E79C]">
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <ul class="flex flex-col items-center gap-y-3 font-semibold pb-4" x-show="isOpen">
+            <li class="hover:text-[#53E79C]"><a href="#">Home</a></li>
+            <li class="hover:text-[#53E79C]"><a href="#">About Us</a></li>
+            <li class="hover:text-[#53E79C]"><a href="#">Services</a></li>
+            <li class="hover:text-[#53E79C]"><a href="#">Products</a></li>
+            <li class="hover:text-[#53E79C]"><a href="#">Careers</a></li>
+            <li class="ms-6 bg-[#53E79C] hover:bg-[#4DF5A0] text-black py-3 px-4 rounded-md shadow shadow-[#53E79C]">
+                <a href="#">Contact Us</a>
+            </li>
+        </ul>
+    </header>
+</body>
+
+</html>
